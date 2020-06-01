@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Absen Guru Private</string>
+    <string name="tab_text_1" />
+    <string name="tab_text_2" />
 </resources>

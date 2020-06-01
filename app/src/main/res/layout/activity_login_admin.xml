@@ -6,14 +6,16 @@
     android:layout_height="match_parent"
     android:padding="15dp"
     android:id="@+id/login_admin"
-    tools:context=".LoginAdmin">
+    android:background="#303030"
+    tools:context=".LoginAdminActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login Admin"
         android:textSize="28sp"
-        android:textStyle="bold"
+        android:textColor="#FFF"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +25,11 @@
         android:id="@+id/edt_username_admin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:hint="username"
+        android:textColorHint="#FFF"
+        android:textColor="#FFF"
+        android:backgroundTint="#FFF"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,6 +40,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="password"
+        android:textColorHint="#FFF"
+        android:textColor="#FFF"
+        android:backgroundTint="#FFF"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:inputType="textPassword"
         app:layout_constraintTop_toBottomOf="@id/edt_username_admin"
         app:layout_constraintBottom_toTopOf="@id/btn_login_admin"
@@ -42,35 +52,26 @@
 
     <Button
         android:id="@+id/btn_login_admin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
         android:text="login"
-        android:layout_marginTop="25dp"
+        android:background="@color/colorAccent"
+        android:textColor="#FFF"
         app:layout_constraintTop_toTopOf="@id/edt_password_admin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
-        android:id="@+id/or"
+        android:id="@+id/txt_login_guru"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="OR"
+        android:text="Login sebagai Guru"
+        android:textColor="#FFF"
         android:textStyle="bold"
-        android:textSize="18sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@id/btn_login_admin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/btn_login_guru"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="LOGIN AS TEACHER"
-        android:layout_marginTop="25dp"
-        app:layout_constraintTop_toTopOf="@id/or"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:onClick="switchLoginGuru"/>

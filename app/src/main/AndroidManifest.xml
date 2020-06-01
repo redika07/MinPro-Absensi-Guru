@@ -3,6 +3,7 @@
     package="id.ac.polinema.absenguruprivate">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -11,9 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FormActivity"/>
+        <activity android:name=".SiswaPrivateActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDGyWPwfZXoaz2AsceT_1j95SlUMksztgc" />
+
+        <activity android:name=".FormGuruActivity" />
+        <activity android:name=".GuruActivity" />
         <activity android:name=".AdminActivity" />
-        <activity android:name=".LoginAdmin" />
+        <activity android:name=".DetailAbsenActivity" />
+        <activity android:name=".FormSiswaActivity" />
+        <activity android:name=".LoginAdminActivity" />
+        <activity android:name=".MapsActivity" />
         <activity android:name=".LoginGuruActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
